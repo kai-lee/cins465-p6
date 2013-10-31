@@ -1,4 +1,7 @@
-<h1>Listing listings</h1>
+
+<h1><%=image_tag("chibi1.jpg", alt: "URL")%><br>
+Listing Urls Home</h1>
+
 
 <table>
   <thead>
@@ -7,9 +10,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Url</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Date Created/Modified</th>
     </tr>
   </thead>
 
@@ -19,7 +20,14 @@
         <td><%= listing.user_id %></td>
         <td><%= listing.name %></td>
         <td><%= listing.description %></td>
-        <td><%= listing.url %></td>
+        <td><%= link_to nil, listing.url %></td>
+	<td>
+	<% if listing.updated_on > listing.created_on %>
+		<%= listing.updated_on %>
+	<% else %>
+		<%= listing.created_on %>
+	<% end %> 
+	</td>
 	<td><%= link_to 'Show', listing %></td>
         <% if listing.user_id.match (current_user.email) %>
 	<td><%= link_to 'Edit', edit_listing_path(listing) %></td>

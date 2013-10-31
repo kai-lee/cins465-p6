@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20131030215942) do
     t.string   "name"
     t.text     "description"
     t.string   "url"
+    t.datetime "created_on"
+    t.datetime "updated_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,11 +1,14 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: [:show, :edit, :update, :destroy]
+  
+before_filter :authenticate_user!
+before_action :set_listing, only: [:show, :edit, :update, :destroy]
 
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
-  end
+   @listings = Listing.all
+#	@listing = listing.search(params[:search]) 
+ end
 
   # GET /listings/1
   # GET /listings/1.json
@@ -71,4 +74,8 @@ class ListingsController < ApplicationController
     def listing_params
       params.require(:listing).permit(:user_id, :name, :description, :url)
     end
+
+
+
+
 end

@@ -5,7 +5,7 @@ class CreateListings < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :url
-
+      t.datetime :created_on, :updated_on
       t.timestamps
     end
   end
