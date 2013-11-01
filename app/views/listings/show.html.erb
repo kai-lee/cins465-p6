@@ -14,7 +14,7 @@
 <tr>
   <td><%= @listing.name %></td>
   <td><%= @listing.description %></td>
-  <td><%= @listing.url %></td>
+  <td><%= link_to nil, @listing.url %></td>
   <td><%= @listing.doi %></td>
   <td><%= @listing.created_at %>
   <td><%= @listing.updated_at %>
