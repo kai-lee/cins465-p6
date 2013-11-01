@@ -1,6 +1,6 @@
 
 <h1><%=image_tag("chibi1.jpg", alt: "URL")%><br>
-Listing Urls Home</h1>
+Listing Urls Home</h1><br>
 
 <% if user_signed_in? %>
 <div id="searchbar">
@@ -54,8 +54,12 @@ Search by Name: <%= form_tag listings_path, :method => 'get' do %>
 </table>
 
 <br>
-
-<%= link_to 'New Listing', new_listing_path %>
+<table id="1">
+<thead>
+<tr><th id="1"><%= link_to 'New Listing', new_listing_path %></th>
+</tr>
+</thead>
+</table>
 
 <% else %>
 
