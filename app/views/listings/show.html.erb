@@ -1,24 +1,25 @@
-<p id="notice"><%= notice %></p>
+<table>
+<thead>
+<tr>
+<th>Name:</th>
+<th>Description:</th>
+<th>URL:</th>
+<th>DOI:</th>
+<th>Created On:</th>
+<th>Modified On:</th>
+</tr>
+</thead>
 
-<p>
-  <strong>User:</strong>
-  <%= @listing.user_id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @listing.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @listing.description %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @listing.url %>
-</p>
-
+<tbody>
+<tr>
+  <td><%= @listing.name %></td>
+  <td><%= @listing.description %></td>
+  <td><%= @listing.url %></td>
+  <td><%= @listing.doi %></td>
+  <td><%= @listing.created_at %>
+  <td><%= @listing.updated_at %>
+</td>
+</tbody>
+</table>
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>

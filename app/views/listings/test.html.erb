@@ -4,14 +4,7 @@ Listing Urls Home</h1>
 
 <% if user_signed_in? %>
 <div id="searchbar">
-Search by Name: <%= form_tag listings_path, :method => 'get' do %>
-<p>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search", :name => nil %>
-</p>
-<% end %>
-
-
+Search by Name:
 </div>
 
 <table>
@@ -60,12 +53,7 @@ Search by Name: <%= form_tag listings_path, :method => 'get' do %>
 <% else %>
 
 <div id="searchbar">
-Search by DOI: <%= form_tag listings_path, :method => 'get' do %>
-<p>
-<%= text_field_tag :searchdoi, params[:searchdoi] %>
-<%= submit_tag "Search", :name => nil %>
-</p>
-<% end %> 
+Search by DOI:
 </div>
 <% end %>
 
